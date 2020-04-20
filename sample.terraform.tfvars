@@ -9,7 +9,7 @@ public_subnets_cidr  = "Public Subnet CIDR ranger" //["10.30.1.0/24", "10.30.2.0
 private_subnets_cidr = "Private Subnet CIDR ranger" //["10.30.10.0/24", "10.30.20.0/24"]
 
 
-//For All variables valur run ./get-password.sh command
+//For All variables value run ./get-password.sh command
 JICOFO_COMPONENT_SECRET = ""
 JICOFO_AUTH_PASSWORD    = ""
 JVB_AUTH_PASSWORD       = ""
