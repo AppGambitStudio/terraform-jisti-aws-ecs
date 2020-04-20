@@ -1,0 +1,634 @@
+[
+  {
+    "dnsSearchDomains": [],
+    "logConfiguration": null,
+    "entryPoint": [],
+    "portMappings": [],
+    "command": [],
+    "linuxParameters": {
+      "capabilities": {
+        "add": null,
+        "drop": null
+      },
+      "sharedMemorySize": null,
+      "tmpfs": null,
+      "devices": null,
+      "maxSwap": null,
+      "swappiness": null,
+      "initProcessEnabled": null
+    },
+    "cpu": 0,
+    "environment": [
+      {
+        "name": "ENABLE_AUTH",
+        "value": ""
+      },
+      {
+        "name": "JIBRI_BREWERY_MUC",
+        "value": "jibribrewery"
+      },
+      {
+        "name": "JIBRI_PENDING_TIMEOUT",
+        "value": "90"
+      },
+      {
+        "name": "JICOFO_AUTH_PASSWORD",
+        "value": "${JICOFO_AUTH_PASSWORD}"
+      },
+      {
+        "name": "JICOFO_AUTH_USER",
+        "value": "focus"
+      },
+      {
+        "name": "JICOFO_COMPONENT_SECRET",
+        "value": "${JICOFO_COMPONENT_SECRET}"
+      },
+      {
+        "name": "JICOFO_RESERVATION_REST_BASE_URL",
+        "value": ""
+      },
+      {
+        "name": "JIGASI_BREWERY_MUC",
+        "value": "jigasibrewery"
+      },
+      {
+        "name": "JIGASI_SIP_URI",
+        "value": ""
+      },
+      {
+        "name": "JVB_BREWERY_MUC",
+        "value": "jvbbrewery"
+      },
+      {
+        "name": "TZ",
+        "value": "Europe/Amsterdam"
+      },
+      {
+        "name": "XMPP_AUTH_DOMAIN",
+        "value": "auth.meet.jitsi"
+      },
+      {
+        "name": "XMPP_DOMAIN",
+        "value": "meet.jitsi"
+      },
+      {
+        "name": "XMPP_INTERNAL_MUC_DOMAIN",
+        "value": "internal-muc.meet.jitsi"
+      },
+      {
+        "name": "XMPP_SERVER",
+        "value": "xmpp.meet.jitsi"
+      }
+    ],
+    "resourceRequirements": null,
+    "ulimits": null,
+    "dnsServers": [],
+    "workingDirectory": null,
+    "secrets": null,
+    "dockerSecurityOptions": [],
+    "memory": 1024,
+    "memoryReservation": null,
+    "volumesFrom": [],
+    "stopTimeout": null,
+    "image": "jitsi/jicofo",
+    "startTimeout": null,
+    "firelensConfiguration": null,
+    "dependsOn": null,
+    "disableNetworking": null,
+    "interactive": null,
+    "healthCheck": null,
+    "essential": true,
+    "links": [
+      "prosody:xmpp.meet.jitsi"
+    ],
+    "hostname": null,
+    "extraHosts": null,
+    "pseudoTerminal": false,
+    "user": null,
+    "readonlyRootFilesystem": false,
+    "dockerLabels": null,
+    "systemControls": null,
+    "privileged": false,
+    "name": "jicofo"
+  },
+  {
+    "dnsSearchDomains": [],
+    "logConfiguration": null,
+    "entryPoint": [],
+    "portMappings": [
+      {
+        "hostPort": 10000,
+        "protocol": "udp",
+        "containerPort": 10000
+      },
+      {
+        "hostPort": 4443,
+        "protocol": "tcp",
+        "containerPort": 4443
+      }
+    ],
+    "command": [],
+    "linuxParameters": {
+      "capabilities": {
+        "add": null,
+        "drop": null
+      },
+      "sharedMemorySize": null,
+      "tmpfs": null,
+      "devices": null,
+      "maxSwap": null,
+      "swappiness": null,
+      "initProcessEnabled": null
+    },
+    "cpu": 0,
+    "environment": [
+      {
+        "name": "DOCKER_HOST_ADDRESS",
+        "value": ""
+      },
+      {
+        "name": "JVB_AUTH_PASSWORD",
+        "value": "${JVB_AUTH_PASSWORD}"
+      },
+      {
+        "name": "JVB_AUTH_USER",
+        "value": "jvb"
+      },
+      {
+        "name": "JVB_BREWERY_MUC",
+        "value": "jvbbrewery"
+      },
+      {
+        "name": "JVB_ENABLE_APIS",
+        "value": ""
+      },
+      {
+        "name": "JVB_PORT",
+        "value": "10000"
+      },
+      {
+        "name": "JVB_STUN_SERVERS",
+        "value": "meet-jit-si-turnrelay.jitsi.net:443"
+      },
+      {
+        "name": "JVB_TCP_HARVESTER_DISABLED",
+        "value": "true"
+      },
+      {
+        "name": "JVB_TCP_PORT",
+        "value": "4443"
+      },
+      {
+        "name": "TZ",
+        "value": "Europe/Amsterdam"
+      },
+      {
+        "name": "XMPP_AUTH_DOMAIN",
+        "value": "auth.meet.jitsi"
+      },
+      {
+        "name": "XMPP_INTERNAL_MUC_DOMAIN",
+        "value": "internal-muc.meet.jitsi"
+      },
+      {
+        "name": "XMPP_SERVER",
+        "value": "xmpp.meet.jitsi"
+      }
+    ],
+    "resourceRequirements": null,
+    "ulimits": null,
+    "dnsServers": [],
+    "workingDirectory": null,
+    "secrets": null,
+    "dockerSecurityOptions": [],
+    "memory": 4096,
+    "memoryReservation": null,
+    "volumesFrom": [],
+    "stopTimeout": null,
+    "image": "jitsi/jvb",
+    "startTimeout": null,
+    "firelensConfiguration": null,
+    "dependsOn": null,
+    "disableNetworking": null,
+    "interactive": null,
+    "healthCheck": null,
+    "essential": true,
+    "links": [
+      "prosody:xmpp.meet.jitsi"
+    ],
+    "hostname": null,
+    "extraHosts": null,
+    "pseudoTerminal": false,
+    "user": null,
+    "readonlyRootFilesystem": false,
+    "dockerLabels": null,
+    "systemControls": null,
+    "privileged": false,
+    "name": "jvb"
+  },
+  {
+    "dnsSearchDomains": [],
+    "logConfiguration": null,
+    "entryPoint": [],
+    "portMappings": [],
+    "command": [],
+    "linuxParameters": {
+      "capabilities": {
+        "add": null,
+        "drop": null
+      },
+      "sharedMemorySize": null,
+      "tmpfs": null,
+      "devices": null,
+      "maxSwap": null,
+      "swappiness": null,
+      "initProcessEnabled": null
+    },
+    "cpu": 0,
+    "environment": [
+      {
+        "name": "AUTH_TYPE",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_AUTH",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_GUESTS",
+        "value": ""
+      },
+      {
+        "name": "GLOBAL_CONFIG",
+        "value": ""
+      },
+      {
+        "name": "GLOBAL_MODULES",
+        "value": ""
+      },
+      {
+        "name": "JIBRI_RECORDER_PASSWORD",
+        "value": "${JIBRI_RECORDER_PASSWORD}"
+      },
+      {
+        "name": "JIBRI_RECORDER_USER",
+        "value": "recorder"
+      },
+      {
+        "name": "JIBRI_XMPP_PASSWORD",
+        "value": "${JIBRI_XMPP_PASSWORD}"
+      },
+      {
+        "name": "JIBRI_XMPP_USER",
+        "value": "jibri"
+      },
+      {
+        "name": "JICOFO_AUTH_PASSWORD",
+        "value": "${JICOFO_AUTH_PASSWORD}"
+      },
+      {
+        "name": "JICOFO_AUTH_USER",
+        "value": "focus"
+      },
+      {
+        "name": "JICOFO_COMPONENT_SECRET",
+        "value": "${JICOFO_COMPONENT_SECRET}"
+      },
+      {
+        "name": "JIGASI_XMPP_PASSWORD",
+        "value": "${JIGASI_XMPP_PASSWORD}"
+      },
+      {
+        "name": "JIGASI_XMPP_USER",
+        "value": "jigasi"
+      },
+      {
+        "name": "JVB_AUTH_PASSWORD",
+        "value": "${JVB_AUTH_PASSWORD}"
+      },
+      {
+        "name": "JVB_AUTH_USER",
+        "value": "jvb"
+      },
+      {
+        "name": "JWT_ACCEPTED_AUDIENCES",
+        "value": ""
+      },
+      {
+        "name": "JWT_ACCEPTED_ISSUERS",
+        "value": ""
+      },
+      {
+        "name": "JWT_ALLOW_EMPTY",
+        "value": ""
+      },
+      {
+        "name": "JWT_APP_ID",
+        "value": ""
+      },
+      {
+        "name": "JWT_APP_SECRET",
+        "value": ""
+      },
+      {
+        "name": "JWT_ASAP_KEYSERVER",
+        "value": ""
+      },
+      {
+        "name": "JWT_AUTH_TYPE",
+        "value": ""
+      },
+      {
+        "name": "JWT_TOKEN_AUTH_MODULE",
+        "value": ""
+      },
+      {
+        "name": "LDAP_AUTH_METHOD",
+        "value": ""
+      },
+      {
+        "name": "LDAP_BASE",
+        "value": ""
+      },
+      {
+        "name": "LDAP_BINDDN",
+        "value": ""
+      },
+      {
+        "name": "LDAP_BINDPW",
+        "value": ""
+      },
+      {
+        "name": "LDAP_FILTER",
+        "value": ""
+      },
+      {
+        "name": "LDAP_START_TLS",
+        "value": ""
+      },
+      {
+        "name": "LDAP_TLS_CACERT_DIR",
+        "value": ""
+      },
+      {
+        "name": "LDAP_TLS_CACERT_FILE",
+        "value": ""
+      },
+      {
+        "name": "LDAP_TLS_CHECK_PEER",
+        "value": ""
+      },
+      {
+        "name": "LDAP_TLS_CIPHERS",
+        "value": ""
+      },
+      {
+        "name": "LDAP_URL",
+        "value": ""
+      },
+      {
+        "name": "LDAP_USE_TLS",
+        "value": ""
+      },
+      {
+        "name": "LDAP_VERSION",
+        "value": ""
+      },
+      {
+        "name": "LOG_LEVEL",
+        "value": ""
+      },
+      {
+        "name": "TZ",
+        "value": "Europe/Amsterdam"
+      },
+      {
+        "name": "XMPP_AUTH_DOMAIN",
+        "value": "auth.meet.jitsi"
+      },
+      {
+        "name": "XMPP_DOMAIN",
+        "value": "meet.jitsi"
+      },
+      {
+        "name": "XMPP_GUEST_DOMAIN",
+        "value": "guest.meet.jitsi"
+      },
+      {
+        "name": "XMPP_INTERNAL_MUC_DOMAIN",
+        "value": "internal-muc.meet.jitsi"
+      },
+      {
+        "name": "XMPP_INTERNAL_MUC_MODULES",
+        "value": ""
+      },
+      {
+        "name": "XMPP_MODULES",
+        "value": ""
+      },
+      {
+        "name": "XMPP_MUC_DOMAIN",
+        "value": "muc.meet.jitsi"
+      },
+      {
+        "name": "XMPP_MUC_MODULES",
+        "value": ""
+      },
+      {
+        "name": "XMPP_RECORDER_DOMAIN",
+        "value": "recorder.meet.jitsi"
+      }
+    ],
+    "resourceRequirements": null,
+    "ulimits": null,
+    "dnsServers": [],
+    "workingDirectory": null,
+    "secrets": null,
+    "dockerSecurityOptions": [],
+    "memory": 1024,
+    "memoryReservation": null,
+    "volumesFrom": [],
+    "stopTimeout": null,
+    "image": "jitsi/prosody",
+    "startTimeout": null,
+    "firelensConfiguration": null,
+    "dependsOn": null,
+    "disableNetworking": null,
+    "interactive": null,
+    "healthCheck": null,
+    "essential": true,
+    "links": [],
+    "hostname": "xmpp.meet.jitsi",
+    "extraHosts": null,
+    "pseudoTerminal": false,
+    "user": null,
+    "readonlyRootFilesystem": false,
+    "dockerLabels": null,
+    "systemControls": null,
+    "privileged": false,
+    "name": "prosody"
+  },
+  {
+    "dnsSearchDomains": [],
+    "logConfiguration": null,
+    "entryPoint": [],
+    "portMappings": [
+      {
+        "hostPort": 8000,
+        "protocol": "tcp",
+        "containerPort": 80
+      },
+      {
+        "hostPort": 8443,
+        "protocol": "tcp",
+        "containerPort": 443
+      }
+    ],
+    "command": [],
+    "linuxParameters": {
+      "capabilities": {
+        "add": null,
+        "drop": null
+      },
+      "sharedMemorySize": null,
+      "tmpfs": null,
+      "devices": null,
+      "maxSwap": null,
+      "swappiness": null,
+      "initProcessEnabled": null
+    },
+    "cpu": 0,
+    "environment": [
+      {
+        "name": "DISABLE_HTTPS",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_AUTH",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_GUESTS",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_HTTP_REDIRECT",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_LETSENCRYPT",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_RECORDING",
+        "value": ""
+      },
+      {
+        "name": "ENABLE_TRANSCRIPTIONS",
+        "value": ""
+      },
+      {
+        "name": "ETHERPAD_URL_BASE",
+        "value": ""
+      },
+      {
+        "name": "JIBRI_BREWERY_MUC",
+        "value": "jibribrewery"
+      },
+      {
+        "name": "JIBRI_PENDING_TIMEOUT",
+        "value": "90"
+      },
+      {
+        "name": "JIBRI_RECORDER_PASSWORD",
+        "value": "${JIBRI_RECORDER_PASSWORD}"
+      },
+      {
+        "name": "JIBRI_RECORDER_USER",
+        "value": "recorder"
+      },
+      {
+        "name": "JIBRI_XMPP_PASSWORD",
+        "value": "${JIBRI_XMPP_PASSWORD}"
+      },
+      {
+        "name": "JIBRI_XMPP_USER",
+        "value": "jibri"
+      },
+      {
+        "name": "JICOFO_AUTH_USER",
+        "value": "focus"
+      },
+      {
+        "name": "LETSENCRYPT_DOMAIN",
+        "value": ""
+      },
+      {
+        "name": "LETSENCRYPT_EMAIL",
+        "value": ""
+      },
+      {
+        "name": "PUBLIC_URL",
+        "value": ""
+      },
+      {
+        "name": "TZ",
+        "value": "Europe/Amsterdam"
+      },
+      {
+        "name": "XMPP_AUTH_DOMAIN",
+        "value": "auth.meet.jitsi"
+      },
+      {
+        "name": "XMPP_BOSH_URL_BASE",
+        "value": "http://xmpp.meet.jitsi:5280"
+      },
+      {
+        "name": "XMPP_DOMAIN",
+        "value": "meet.jitsi"
+      },
+      {
+        "name": "XMPP_GUEST_DOMAIN",
+        "value": "guest.meet.jitsi"
+      },
+      {
+        "name": "XMPP_MUC_DOMAIN",
+        "value": "muc.meet.jitsi"
+      },
+      {
+        "name": "XMPP_RECORDER_DOMAIN",
+        "value": "recorder.meet.jitsi"
+      }
+    ],
+    "resourceRequirements": null,
+    "ulimits": null,
+    "dnsServers": [],
+    "workingDirectory": null,
+    "secrets": null,
+    "dockerSecurityOptions": [],
+    "memory": 512,
+    "memoryReservation": null,
+    "volumesFrom": [],
+    "stopTimeout": null,
+    "image": "jitsi/web",
+    "startTimeout": null,
+    "firelensConfiguration": null,
+    "dependsOn": null,
+    "disableNetworking": null,
+    "interactive": null,
+    "healthCheck": null,
+    "essential": true,
+    "links": [
+      "prosody:xmpp.meet.jitsi"
+    ],
+    "hostname": null,
+    "extraHosts": null,
+    "pseudoTerminal": false,
+    "user": null,
+    "readonlyRootFilesystem": false,
+    "dockerLabels": null,
+    "systemControls": null,
+    "privileged": false,
+    "name": "web"
+  }
+]
