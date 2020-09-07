@@ -56,3 +56,5 @@ These variables are used in the task definition file.
 - Run `terraform plan` to verify all created resources.
 - Run `terraform apply` to create all resources on the AWS account given region.
 - If you want to delete infrastructure run `terraform destroy`.
+
+##### For more information please follow our medium article [terraform-jisti-aws-ecs](https://medium.com/appgambit/configure-jitsi-open-source-web-conferencing-solution-on-aws-with-terraform-b4191ba04d2b)
