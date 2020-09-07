@@ -3,7 +3,7 @@ resource "random_id" "random_id_prefix" {
 }
 
 data "aws_availability_zones" "available" {
-  state = "available"
+  state   = "available"
 }
 
 /*====
@@ -12,10 +12,6 @@ Variables used across all modules
 locals {
   # production_availability_zones = ["${var.region}a", "${var.region}b", "${var.region}c"]
   production_availability_zones = "${data.aws_availability_zones.available.names}"
-}
-
-provider "aws" {
-  region = "${var.region}"
 }
 
 module "network" {
