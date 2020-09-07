@@ -1,7 +1,7 @@
 region            = "<Region>"
-ecs_key_pair_name = "<SSH Key for EC2>"
-
 environment = "production"
+
+ecs_key_pair_name = "<SSH Key for EC2>"
 
 /* module networking */
 vpc_cidr             = "<CIRD ranger for VPC>"
